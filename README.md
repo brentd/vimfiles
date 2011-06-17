@@ -14,7 +14,7 @@ MacVim Replacement Icon
 
 Includes a replacement .icns for MacVim's icon that's quite nice.
 
-![Icon](http://cl.ly/0q22152P3d1p0W0m3s1i/Screen_shot_2011-06-17_at_6.09.25_PM.png)
+![Icon](http://f.cl.ly/items/103w2G0u3v0v0O0n2Z3J/Screen%20shot%202011-06-17%20at%206.09.25%20PM.png)
 
 [Original Link](http://forrst.com/posts/MacVim_Icon_Replacement-020)
 
