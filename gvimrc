@@ -32,6 +32,10 @@ if has("gui_macvim")
   imap <Leader>= <Esc> <C-w>=
 endif
 
+
+
+" Below is mostly NERDTree stuff and was taken from Janus (github.com/carlhuda/janus)
+
 " Utility functions to create file commands
 function s:CommandCabbr(abbreviation, expansion)
   execute 'cabbrev ' . a:abbreviation . ' <c-r>=getcmdpos() == 1 && getcmdtype() == ":" ? "' . a:expansion . '" : "' . a:abbreviation . '"<CR>'
