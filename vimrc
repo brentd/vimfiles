@@ -19,7 +19,7 @@ set wildmode=list:longest         " Complete files like a shell.
 set ignorecase                    " Case-insensitive searching.
 set smartcase                     " But case-sensitive if expression contains a capital letter.
 
-"set number                        " Show line numbers.
+set relativenumber                " Relative line number
 set ruler                         " Show cursor position.
 
 set incsearch                     " Highlight matches as you type.
@@ -48,21 +48,24 @@ set title                         " Set the terminal's title
 set gdefault                      " Default regexes to global
 set statusline=2
 
-" Relative line number
-set relativenumber
+
 
 " Remaps
 
 " Use 'jj' to exit insert mode
 inoremap jj <ESC>l
 
+" Shift-Enter to exit from insert mode
+inoremap <S-CR> <Esc>l
+
 " Use tab to jump between do/end etc.
 nnoremap <tab> %
 vnoremap <tab> %
 
-
+" Quicker command mode
 nnoremap ; :
 
+" Hit esc to clear search highlights
 nnoremap <silent> <esc> :noh<return><esc>
 
 " Window navigation
@@ -70,9 +73,6 @@ nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
-
-" Allows Shift-Enter to exit from insert mode
-inoremap <S-CR> <Esc>l
 
 
 " Appearance
@@ -93,16 +93,6 @@ hi Visual guibg=#333333 guifg=#EEEEEE
 autocmd VimEnter * hi NERDTreeDir guifg=#eeeeee gui=bold
 autocmd VimEnter * hi NERDTreeDirSlash guifg=#eeeeee
 autocmd VimEnter * hi NERDTreeExecFile gui=none
-
-" Indent Guides Plugin
-
-let g:indent_guides_auto_colors = 0
-let g:indent_guides_guide_size  = 1
-let g:indent_guides_start_level = 2
-"let g:indent_guides_enable_on_vim_startup = 1
-
-autocmd VimEnter,Colorscheme * hi IndentGuidesOdd guibg=#073642
-autocmd VimEnter,Colorscheme * hi link IndentGuidesEven IndentGuidesOdd
 
 
 " Misc

@@ -34,7 +34,7 @@ endif
 
 
 
-" Below is mostly NERDTree stuff and was taken from Janus (github.com/carlhuda/janus)
+" Below is mostly NERDTree related and was taken from Janus (github.com/carlhuda/janus)
 
 " Utility functions to create file commands
 function s:CommandCabbr(abbreviation, expansion)
