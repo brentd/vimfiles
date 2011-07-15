@@ -4,6 +4,7 @@ set encoding=utf-8                " Use UTF-8 everywhere.
 set guioptions-=T                 " Hide toolbar.
 set guioptions-=L
 set guioptions-=r                 " Don't show right scrollbar
+set noballooneval
 
 if has("gui_macvim")
   " Fullscreen takes up entire screen
