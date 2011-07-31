@@ -6,6 +6,10 @@ call pathogen#runtime_append_all_bundles()
 syntax enable                     " Turn on syntax highlighting.
 filetype plugin indent on         " Turn on file type detection.
 
+set autoindent
+set smartindent
+set showmatch
+
 set showcmd                       " Display incomplete commands.
 set showmode                      " Display the mode you're in.
 
@@ -19,7 +23,7 @@ set wildmode=list:longest         " Complete files like a shell.
 set ignorecase                    " Case-insensitive searching.
 set smartcase                     " But case-sensitive if expression contains a capital letter.
 
-set relativenumber                " Relative line number
+set number                        " line numbers
 set ruler                         " Show cursor position.
 
 set incsearch                     " Highlight matches as you type.
@@ -28,7 +32,7 @@ set hlsearch                      " Highlight matches.
 set nowrap                        " Turn off line wrapping.
 set scrolloff=3                   " Show 3 lines of context around the cursor.
 
-set list listchars=tab:\ \ ,trail:•
+set list listchars=tab:▸\ ,trail:•
 
 set visualbell                    " No beeping.
 
@@ -40,7 +44,7 @@ set tabstop=2                     " Global tab width.
 set shiftwidth=2                  " And again, related.
 set expandtab                     " Use spaces instead of tabs
 
-set cursorline
+"set cursorline
 
 set title                         " Set the terminal's title
 
@@ -53,8 +57,9 @@ set laststatus=2
 " Use 'jj' to exit insert mode
 inoremap jj <ESC>l
 
-" Shift-Enter to exit from insert mode
-inoremap <S-CR> <Esc>l
+" Shift-Enter to insert a line above
+inoremap <S-CR><ESC><S-O>
+
 
 " Use tab to jump between do/end etc.
 nnoremap <tab> %
@@ -72,9 +77,18 @@ nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 
+inoremap <C-h> <esc><C-w>h
+inoremap <C-j> <esc><C-w>j
+inoremap <C-k> <esc><C-w>k
+inoremap <C-l> <esc><C-w>l
+
 nnoremap <C-a> ^
 nnoremap <C-e> $
 
+" Auto indent after brackets
+inoremap {<cr> {<cr>}<c-o>O
+inoremap [<cr> [<cr>]<c-o>O
+inoremap (<cr> (<cr>)<c-o>O
 
 " Appearance
 
@@ -88,6 +102,8 @@ colorscheme ir_black
 
 hi Cursor guibg=white
 hi Visual guibg=#333333 guifg=#EEEEEE
+hi MatchParen guibg=#333333
+hi SpecialKey guibg=#222222
 
 " NERDTree colors
 

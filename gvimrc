@@ -4,7 +4,8 @@ set encoding=utf-8                " Use UTF-8 everywhere.
 set guioptions-=T                 " Hide toolbar.
 set guioptions-=L
 set guioptions-=r                 " Don't show right scrollbar
-set noballooneval
+
+autocmd BufEnter * set noballooneval
 
 if has("gui_macvim")
   " Fullscreen takes up entire screen
@@ -13,6 +14,9 @@ if has("gui_macvim")
   " Command-][ to increase/decrease indentation
   vmap <D-]> >gv
   vmap <D-[> <gv
+
+  nmap <D-]> >>
+  nmap <D-[> <<
 
   " Command-/ to toggle comments
   map <D-/> <plug>NERDCommenterToggle<CR>

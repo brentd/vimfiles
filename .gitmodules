@@ -19,3 +19,33 @@
 [submodule "bundle/ack"]
 	path = bundle/ack
 	url = git://github.com/mileszs/ack.vim.git
+[submodule "bundle/git.vim"]
+	path = bundle/git.vim
+	url = git://github.com/motemen/git-vim.git
+[submodule "bundle/vim-coffee-script"]
+	path = bundle/vim-coffee-script
+	url = git://github.com/kchmck/vim-coffee-script.git
+[submodule "bundle/autoclose"]
+	path = bundle/autoclose
+	url = git://github.com/Townk/vim-autoclose.git
+[submodule "bundle/snipmate"]
+	path = bundle/snipmate
+	url = git://github.com/msanders/snipmate.vim.git
+[submodule "bundle/gundo.vim"]
+	path = bundle/gundo.vim
+	url = git://github.com/sjl/gundo.vim.git
+[submodule "bundle/vim-indent-object"]
+	path = bundle/vim-indent-object
+	url = git://github.com/michaeljsmith/vim-indent-object.git
+[submodule "bundle/sparkup"]
+	path = bundle/sparkup
+	url = git://github.com/rstacruz/sparkup.git
+[submodule "bundle/ragtag"]
+	path = bundle/ragtag
+	url = git://github.com/tpope/vim-ragtag.git
+[submodule "bundle/vim-zoomwin"]
+	path = bundle/vim-zoomwin
+	url = git://github.com/rphillips/vim-zoomwin.git
+[submodule "bundle/vim-matchit"]
+	path = bundle/vim-matchit
+	url = git://github.com/xianlihua/vim-matchit.git
